@@ -32,6 +32,14 @@ data/
     ├──sift_query.fvecs
 ```
 
+## Dependencies
+Dependencies are listed in `pyproject.toml`.
+
+## Execution
+```sh
+python prepare_datasets.py
+```
+
 ## Relevant Papers
 - [Optimized Product Quantization for Approximate Nearest Neighbor Search](https://openaccess.thecvf.com/content_cvpr_2013/papers/Ge_Optimized_Product_Quantization_2013_CVPR_paper.pdf)
 - [Additive Quantization for Extreme Vector Compression](https://openaccess.thecvf.com/content_cvpr_2014/papers/Babenko_Additive_Quantization_for_2014_CVPR_paper.pdf)
