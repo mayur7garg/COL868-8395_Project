@@ -1,3 +1,4 @@
 data/**/*.fvecs
 data/**/*.ivecs
 data/**/*.npy
+processed_data/
