@@ -1,4 +1,6 @@
+__pycache__
 data/**/*.fvecs
 data/**/*.ivecs
 data/**/*.npy
 processed_data/
+reports/

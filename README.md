@@ -36,9 +36,22 @@ data/
 Dependencies are listed in `pyproject.toml`.
 
 ## Execution
+1. Prepare the standardized version of the datasets. Uncomment the code for `GIST1M` first if using that dataset.
 ```sh
 python prepare_datasets.py
 ```
+
+This creates 3 `.npy` files for each dataset in `processed_data` folder:
+- `data_vectors.npy`: Contains the dataset to instantiate the index.
+- `query_vectors.npy`: Query vectors to compute the metrics for.
+- `groundtruth.npy`: For each query vector, this contains the IDs of the most relevant data vectors in order of relevance.
+
+2. Run the experiments. Uncomment the relevant values of `dataset`, `M` and `nbits` in the for loops first.
+```sh
+python experiments.py
+```
+
+This will create a CSV report in the `reports` folder with the timestamp.
 
 ## Relevant Papers
 - [Optimized Product Quantization for Approximate Nearest Neighbor Search](https://openaccess.thecvf.com/content_cvpr_2013/papers/Ge_Optimized_Product_Quantization_2013_CVPR_paper.pdf)
