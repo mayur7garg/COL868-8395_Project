@@ -80,8 +80,8 @@ def evaluate(
     return results
 
 for dataset in [
-    # "CIFAR100",
-    "ImageNetMini1000",
+    "CIFAR100",
+    # "ImageNetMini1000",
     # "SIFT1M",
     # "GIST1M"
 ]:
@@ -105,7 +105,10 @@ for dataset in [
         4, 8, 
         # 16, 32
     ]:
-        for nbits in [4, 8]:
+        for nbits in [
+            4, 
+            # 8
+        ]:
             # StandardPQ
             start = time.time()
             index = StandardPQ(data_vectors, M, nbits)

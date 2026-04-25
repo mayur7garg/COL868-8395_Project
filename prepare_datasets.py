@@ -108,28 +108,28 @@ if __name__ == "__main__":
         OUTPUT_DIR
     )
 
-    OUTPUT_DIR = Path("processed_data", "ImageNetMini1000")
-    OUTPUT_DIR.mkdir(exist_ok = True, parents = True)
-    raw_data = np.load(
-        Path("data", "ImageNetMini1000", "DatasetImageNetMini1000-clip_vit32_b.npy"),
-        allow_pickle = True
-    ).item()
-    prepare_groundtruth_from_classes(
-        raw_data['X_train'],
-        raw_data['y_train'],
-        raw_data['X_test'],
-        raw_data['y_test'],
-        5,
-        OUTPUT_DIR
-    )
+    # OUTPUT_DIR = Path("processed_data", "ImageNetMini1000")
+    # OUTPUT_DIR.mkdir(exist_ok = True, parents = True)
+    # raw_data = np.load(
+    #     Path("data", "ImageNetMini1000", "DatasetImageNetMini1000-clip_vit32_b.npy"),
+    #     allow_pickle = True
+    # ).item()
+    # prepare_groundtruth_from_classes(
+    #     raw_data['X_train'],
+    #     raw_data['y_train'],
+    #     raw_data['X_test'],
+    #     raw_data['y_test'],
+    #     5,
+    #     OUTPUT_DIR
+    # )
 
-    OUTPUT_DIR = Path("processed_data", "SIFT1M")
-    OUTPUT_DIR.mkdir(exist_ok = True, parents = True)
-    process_vec_data(
-        Path("data", "SIFT1M"),
-        "sift",
-        OUTPUT_DIR
-    )
+    # OUTPUT_DIR = Path("processed_data", "SIFT1M")
+    # OUTPUT_DIR.mkdir(exist_ok = True, parents = True)
+    # process_vec_data(
+    #     Path("data", "SIFT1M"),
+    #     "sift",
+    #     OUTPUT_DIR
+    # )
 
     # OUTPUT_DIR = Path("processed_data", "GIST1M")
     # OUTPUT_DIR.mkdir(exist_ok = True, parents = True)
